@@ -1,10 +1,9 @@
 ---
 layout: page
-description: "Ò»ÉúÏë×öÀËÂş¼«¿Í"
+description: "æˆ‘å¹²äº†ä»€ä¹ˆ ç©¶ç«Ÿæ‹¿äº†æ—¶é—´æ¢äº†ä»€ä¹ˆ"
 ---
 
 {% for post in paginator.posts %}
-  {% if post.post-permission %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -24,7 +23,6 @@ description: "Ò»ÉúÏë×öÀËÂş¼«¿Í"
     </p>
 </div>
 <hr>
-  {% endif %}
 {% endfor %}
 
 <!-- Pager -->
