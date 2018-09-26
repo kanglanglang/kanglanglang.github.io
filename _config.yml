@@ -58,8 +58,31 @@ kramdown:
 
 
 
-# Disqus settings
-disqus_username: hux
+# # Disqus settings
+# disqus_username: hux
+
+
+
+
+
+
+# 评论系统
+# Disqus（https://disqus.com/）
+disqus_username: kanglanglang
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 255cc05d85b26b11c1fc                            #生成的clientID
+  clientSecret: af196fec1fa0d08ee4229ad44798152b62c7fae9    #生成的clientSecret
+  repo: kanglanglang.github.io    #仓库名称
+  owner: kanglanglang    #github用户名
+  admin: kanglanglang
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+
+
 
 # Netease settings
 netease_comment: false
