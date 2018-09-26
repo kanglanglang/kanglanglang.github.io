@@ -5,40 +5,13 @@ subtitle:   "不适合人类阅读，非常水的自我笔记"
 date:       2015-04-14 
 author:     "Hux"
 header-img: "img/post-bg-unix-linux.jpg"
+catalog: true
 tags:
-    - OS
-    - Unix
-    - Linux
-post-permission: true
+  - 笔记
 ---
 
 > This document is not completed and will be updated anytime.
 
-
-## Catagory
-
-1. [Unix](#unix)
-	1. [Bell Labs](#bell-labs)
-	2. [Xenix](#xenix)
-	3. [BSD](#bsd)
-	4. [FreeBSD & Apple](#freebsd--apple)
-	5. [NeXTStep](#nextstep)
-	6. [Darwin](#darwin)
-	7. [POSIX](#posix)
-2. [Unix-like](#unix-like)
-	1. [Single Unix Specification](#single-unix-specification)
-	2. [Apple iOS](#apple-ios)
-	3. [XNU Kernel](#xnu-kernel)
-3. [Linux](#linux)
-	1. [Linux Kernel](#linux-kernel)
-	2. [GNU Project](#gnu-project)
-	3. [Android](#android)
-	4. [Android Kernel](#android-kernel)
-	5. [Android ROM](#android-rom)
-	6. [Chrome OS](#chrome-os)
-	7. [Chromium OS](#chromium-os)
-
----
 
 ## Unix 
 
@@ -72,7 +45,7 @@ An **object-oriented**, multitasking OS. Low-level C but High-level OC language 
 大家都知道 NeXT 是 Steve Jobs 被 forced out of Apple 后和 a few of his coworkers 创办的，所以 **NeXTSTEP 绝对是证明 Jobs 实力的作品。** 
 
 - #### Darwin
-[Darwin](http://en.wikipedia.org/wiki/Darwin_(operating_system\)), the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of **POSIX**. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)  
+[Darwin](https://en.wikipedia.org/wiki/Darwin_(operating_system)), the core set of components upon which Mac OS X and iOS based, mostly POSIX compatible, but has never, by itself, been certified as being compatible with any version of **POSIX**. (OS X, since Leopard, has been certified as compatible with the Single UNIX Specification version 3)  
 **所以说 Mac OS X 算是很正统 Unix 的了**
 
 - #### POSIX
@@ -167,7 +140,8 @@ Anyway, there eventually comes to the **GNU/Linux**
 	* GPL 强制后续版本必须是自由软件，而 BSD 的后续可以选择继续开源或者封闭	
 * [Apache License](http://en.wikipedia.org/wiki/Apache_License)
 
-![Public License](http://dl2.iteye.com/upload/attachment/0047/4142/d770c85a-49b7-3c7f-8ae2-cbb6451e00d8.png)
+
+![Public License](/img/in-post/open-source-license.png)
 
 #### Android
 
