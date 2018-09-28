@@ -4,7 +4,7 @@ title:      "k8s 基本概念 2018"
 subtitle:   " \"k8s, 基本概念\""
 date:       2018-09-28 12:00:00
 author:     "kanglang"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/k8s.jpg"
 catalog: true
 
 tags:

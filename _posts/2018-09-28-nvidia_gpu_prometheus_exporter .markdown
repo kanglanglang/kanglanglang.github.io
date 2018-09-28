@@ -4,7 +4,7 @@ title:      "nvidia  gpu  prometheus exporter"
 subtitle:   " nvidia  gpu 实现 prometheus exporter"
 date:       2018-09-28 12:00:00
 author:     "kanglang"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/k8s.jpg"
 catalog: true
 
 tags:
