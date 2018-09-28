@@ -15,7 +15,7 @@ tags:
 > “Yeah It's on. ”
 
 
-# 前言
+前言
 
 #  一、Kubernetes基础知识 
 ## 1、在Kubernete中，Service是分布式集群架构的核心，一个Service对象拥有如下关键特征 
