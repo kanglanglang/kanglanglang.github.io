@@ -3,7 +3,7 @@ layout:     post
 title:      "k8s 基本概念 2018"
 subtitle:   " \"k8s, 基本概念\""
 date:       2018-09-28 12:00:00
-author:     "Hux"
+author:     "kanglang"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 
@@ -17,32 +17,32 @@ tags:
 
 ## 前言
 
-#  一、Kubernetes基础知识 #
-## 1、在Kubernete中，Service是分布式集群架构的核心，一个Service对象拥有如下关键特征 ##
+#  一、Kubernetes基础知识 
+## 1、在Kubernete中，Service是分布式集群架构的核心，一个Service对象拥有如下关键特征 
 > * 拥有一个唯一指定的名字。
 > * 拥有一个虚拟IP和端口号。
 > * 能够提供某种远程服务能力。
 > * 被映射到了提供这种服务能力的一组容器应用上。
 > * Service是从应用视角观察得到的。
 
-## 2、什么是Pod对象 ##
+## 2、什么是Pod对象 
 
 >* 把为Service提供服务的一组进程放入容器中进行隔离，即诞生了Pod对象，每个服务进程都将是Pod中运行的一个容器。
 >* Kubernete给Pod打上一个标签Label，然后给Service定义了一个标签选择器Label Selector，这样二者就可以建立关联关系了。
 >* Pod是从系统视角观察得到的。
-## 3、什么是NodePod ##
+## 3、什么是NodePod 
 > *运行在一个称之为Node的环境中Node可以是物理机、虚机或云主机通常在一个Node上运行几百个Pod。
-## 4、什么是Pause容器和业务容器 ##
+## 4、什么是Pause容器和业务容器 
 >* 在每个Pod中又运行了一个称之为Pause的特殊容器，而其它容器则属于业务容器。
 >* 业务容器共享Pause容器的网络栈和Volume挂载卷，因此它们之间的通信和数据交换更为高效。
 >* 在设计时我们可以充分利用以上特性将一组密切相关的服务进程放入同一个Pod中。
 >* 需要注意的是，并不是每个Pod和它里面运行的容器都能“映射”到一个Service上。只有那些向外界提供服务的一组Pod才会被这样配置。
-##5、Kubernete的集群管理##
+##5、Kubernete的集群管理
 >* Kubernete将集群中的机器划分为一个Master节点和一群工作节点（Node）; 
 >* 在Master节点上运行着集群管理相关的一组进程kube-apiserver、kube-controller-manager和kube-scheduler 。
 >* 这些进程实现了整个集群的资源管理、Pod调度、弹性伸缩、安全控制、系统监控和纠错等管理功能，且都是自动完成的。Node作为工作节点，运行真正的应用程序。
 >* Node上运行着Kubernetes的kublete、kube-proxy服务进程。在Node上Kubernetes管理的最小运行单元是Pod。这些服务进程负责Pod的创建、启动、监控、重启、销毁以及负载均衡服务。
-##6、RC（Replication Controller），为Kubernetes提供了自动扩容功能的支持。在一个RC定义文件中会包括以下3个信息：##
+##6、RC（Replication Controller），为Kubernetes提供了自动扩容功能的支持。在一个RC定义文件中会包括以下3个信息：
 >* 目标Pod的定义目标Pod需要运行的副本数量要监控的目标Pod的标签RC运行机制：
 >* 在创建好RC后，Kubernetes会通过RC中定义的Label挑选出对应的Pod实例并实时监控其状态和数量。
 >* 如果实例数量少于定义的副本数量，则会根据RC中定义的Pod模板来创建一个新的Pod，然后将此Pod调度到合适的Node上启动运行，直到Pod实例的数量达到预定目标。使用RC后，服务的扩容就成了简单的修改RC中副本数量的操作了。
