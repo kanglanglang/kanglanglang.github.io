@@ -191,7 +191,6 @@ Pod的滚动升级
 
 
 ```
-
 # kubectl config view
 apiVersion: v1
 clusters:
@@ -227,7 +226,7 @@ users:
  kubectl edit svc/mysql  #可以直接对各种资源对象进行在线编辑变更
 ```
 
-#13、节点和集群信息查询或调度方法
+# 13、节点和集群信息查询或调度方法
 
 ```
   $ kubectl cordon my-node # 标记 my-node 不可调度
