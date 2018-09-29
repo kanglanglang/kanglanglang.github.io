@@ -168,13 +168,18 @@ Pod的滚动升级
  ```
 [root@bogon ssl]# kubectl config set-cluster default-cluster --server=https://10.0.2.5:6443 --certificate-	authority=/etc/kubernetes/ssl/ca.crtCluster "default-cluster" set.
 ```
-``` [root@bogon ssl]# kubectl config set-credentials default-admin --certificate-authority=/etc/kubernetes/ssl/ca.crt --client-key=/etc/kubernetes/ssl/cs_client.key --client-certificate=/etc/kubernetes/ssl/cs_client.crtUser "default-admin" set.
+
+``` 
+[root@bogon ssl]# kubectl config set-credentials default-admin --certificate-authority=/etc/kubernetes/ssl/ca.crt --client-key=/etc/kubernetes/ssl/cs_client.key --client-certificate=/etc/kubernetes/ssl/cs_client.crtUser "default-admin" set.
 ```
+
 ```[root@bogon ssl]# kubectl config set-context default-system --cluster=default-cluster --user=default-admin  在kubeconfig配置中添加一条名为default-system的上下文记录Context "default-system" created.
 ```
+
 ```
 [root@bogon ssl]# kubectl config use-context default-system     #设置默认上下文为default-systemSwitched to context "default-system".
 ```
+
 ```
 [root@bogon ~]# kubectl config current-context   #查看当前的上下文default-system
 ```
@@ -183,7 +188,6 @@ Pod的滚动升级
 
 
 查看kubectl context配置信息：
-
 
 
 ```
@@ -215,4 +219,23 @@ users:
 
 ```
 [root@bogon ~]# kubectl config current-contextdefault-system
+  default-system
+```
+
+# 12、在线编辑资源
+```
+ kubectl edit svc/mysql  #可以直接对各种资源对象进行在线编辑变更
+```
+
+#13、节点和集群信息查询或调度方法
+
+```
+  $ kubectl cordon my-node # 标记 my-node 不可调度
+  $ kubectl drain my-node # 清空 my-node 以待维护
+  $ kubectl uncordon my-node # 标记 my-node 可调度
+  $ kubectl top node my-node # 显示 my-node 的指标度量
+  $ kubectl cluster-info # 显示 master 和服务的地址
+  $ kubectl cluster-info dump # 将当前集群状态输出到 stdout
+  $ kubectl cluster-info dump --output-directory=/path/to/cluster-state # 将当前集群状态输出到 /path/to/cluster-state
+  # 如果该键和影响的污点（taint）已存在，则使用指定的值替换$ kubectl taint nodes foo dedicated=special-user:NoSchedule
 ```
