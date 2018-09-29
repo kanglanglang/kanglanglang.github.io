@@ -173,7 +173,8 @@ Pod的滚动升级
 [root@bogon ssl]# kubectl config set-credentials default-admin --certificate-authority=/etc/kubernetes/ssl/ca.crt --client-key=/etc/kubernetes/ssl/cs_client.key --client-certificate=/etc/kubernetes/ssl/cs_client.crtUser "default-admin" set.
 ```
 
-```[root@bogon ssl]# kubectl config set-context default-system --cluster=default-cluster --user=default-admin  在kubeconfig配置中添加一条名为default-system的上下文记录Context "default-system" created.
+```
+[root@bogon ssl]# kubectl config set-context default-system --cluster=default-cluster --user=default-admin  在kubeconfig配置中添加一条名为default-system的上下文记录Context "default-system" created.
 ```
 
 ```
@@ -184,11 +185,7 @@ Pod的滚动升级
 [root@bogon ~]# kubectl config current-context   #查看当前的上下文default-system
 ```
 
-
-
-
 查看kubectl context配置信息：
-
 
 ```
 # kubectl config view
